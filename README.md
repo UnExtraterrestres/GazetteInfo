@@ -1,7 +1,7 @@
 # GazetteInfo
 
-## Authors
+## Author
 UnExtraterrestres
 
-## Contributors
+## Contributor
 Sarkarth-M
