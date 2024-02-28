@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>La gazette de L-INFO | Accueil</title>
+        <link rel="stylesheet" type="text/css" href="../styles/gazette.css">
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="actus.html">Toute l'actu</a>
+                </li>
+                <li>
+                    <a href="../php/recherche.php">Recherche</a>
+                </li>
+                <li>
+                    <a href="redaction.html">La rédac</a>
+                </li>
+                <li>
+                    <a href="../php/connexion.php">
+                        ::before
+                        Se connecter
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <img src="../images/logo.png" alt="La gazette de L-INFO"
+            width="780" height="83">
+            <h1>Inscription</h1>
+        </header>
+
+        <main>
+            <section>
+                <h2>Formulaire d'inscription</h2>
+                <p>Pour vous inscrire, remplissez le formulaire ci-dessous</p>
+                
+                <div>
+                    <p>Choisissez un pseudo</p>
+                    <input type="text" name="pseudo" required>
+                </div>
+                <div>
+                    <p>Votre civilité</p>
+                    <input type="radio" name="Monsieur">
+                    <inpur type="radio" name="Madame">
+                </div>
+                <div>
+                    <p>Votre nom</p>
+                    <input type="text" name="nom" required>
+                </div>
+                <div>
+                    <p>Votre prénom</p>
+                    <input type="text" name="prenom" required>
+                </div>
+                <div>
+                    <p>Votre date de naissance</p>
+                    <input type="date" name="date" required>
+                </div>
+                <div>
+                    <p>Votre email</p>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <p>Choisissez un mot de passe</p>
+                    <input type="password" name="password" required>
+                </div>
+                <div>
+                    <p>Répétez le mot de passe</p>
+                    <input type="password" name="password" required>
+                </div>
+                <div>
+                    <p>J'ai lu et accepté les conditions générales d'utilisation</p>
+                    <input type="checkbox" name="conditionutils" required>
+                </div>
+                <div>
+                    <p>J'accepte de recevoir des tonnes de mails pourris</p>
+                    <input type="checkbox" name="tonnemails" required>
+                </div>
+                <div>
+                    <!--Boutons "S'inscrire"-->
+                    <input type="reset" name="reset">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Licence Informatique - Février 2024 - Tous droits réservés</p>
+        </footer>
+    </body>
+</html>
