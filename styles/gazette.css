@@ -351,10 +351,26 @@ section article p {
     Règles appliquées à la page inscription.html
 *******************************************************************************/
 
-section > div {
-    margin: 10px auto;
-    width: 400px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px #000;
+/******************************************************************************
+    Règles appliquées aux section horizontales
+*******************************************************************************/
+.horizontal-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.horizontal-section article {
+    width: 30%; /* Ajustez la largeur selon vos besoins */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.horizontal-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.horizontal-section h3 {
+    margin-top: 10px;
 }
