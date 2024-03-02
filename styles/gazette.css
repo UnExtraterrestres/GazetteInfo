@@ -354,23 +354,23 @@ section article p {
 /******************************************************************************
     Règles appliquées aux section horizontales
 *******************************************************************************/
-.horizontal-section {
+section.horizontal-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.horizontal-section article {
-    width: 30%; /* Ajustez la largeur selon vos besoins */
+section.horizontal-section article {
+    width: 30%;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.horizontal-section img {
+section.horizontal-section img {
     max-width: 100%;
     height: auto;
 }
 
-.horizontal-section h3 {
+section.horizontal-section h3 {
     margin-top: 10px;
 }
