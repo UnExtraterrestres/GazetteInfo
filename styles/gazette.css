@@ -376,6 +376,6 @@ section.horizontal-section h3 {
     order: 1;
 }
 
-.horizontal-section article:last-child {
-    margin-right: 0;
+section.horizontal-section article:last-child {
+    margin-right: 0 !important;
 }
