@@ -373,4 +373,9 @@ section.horizontal-section img {
 
 section.horizontal-section h3 {
     margin-top: 10px;
+    order: 1;
+}
+
+.horizontal-section article:last-child {
+    margin-right: 0;
 }
