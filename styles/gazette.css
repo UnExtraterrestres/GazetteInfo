@@ -346,3 +346,15 @@ section article p {
     padding-left: 170px;
     margin-bottom: 0;
 }
+
+/******************************************************************************
+    Règles appliquées à la page inscription.html
+*******************************************************************************/
+
+section > div {
+    margin: 10px auto;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000;
+}
