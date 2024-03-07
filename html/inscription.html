@@ -30,7 +30,7 @@
                 <p>Pour vous inscrire, remplissez le formulaire ci-dessous</p>
                 <table>
                     <tr>
-                        <td><p>Choisissez un pseudo :</p></td><td><input type="text" placeholder="4 caractères alphanumériques minimum" minlength=4 required></td>
+                        <td>Choisissez un pseudo :</td><td><input type="text" placeholder="4 caractères alphanumériques minimum" minlength=4 required></td>
                     </tr>
                     <tr>
                         <td>
@@ -62,13 +62,18 @@
                         <td>Répétez le mot de passe :</td><td><input type="password"></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" required></td><td>J'ai lu et  accepté les conditions générales d'utilisation</td>
+                        <td>
+                            <label for="condutils">J'ai lu et accepté les conditions générales d'utilisation</label>
+                            <input type="checkbox" id="condutils" required>
+                        </td>
+                        <td>
+                            <label for="condmails">J'accepte de recevoir des tonnes de mails pourris</label>
+                            <input type="checkbox" id="condmails" required>
+                        </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" required></td><td>J'accepte de recevoir des tonnes de mails pourris</td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit"></td><td><input type="reset"></td>
+                        <td><input type="submit"></td>
+                        <td><input type="reset"></td>
                     </tr>
                 </table>
             </section>
