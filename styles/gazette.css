@@ -351,8 +351,17 @@ section article p {
     Règles appliquées à la page inscription.html
 *******************************************************************************/
 
-tr {
-    position : center;
+#inscription table{
+    border: 0;
+}
+
+#incription td {
+    border: 0;
+    align-items: right;
+}
+
+#inscription td input {
+    align-items: left;
 }
 
 /******************************************************************************
