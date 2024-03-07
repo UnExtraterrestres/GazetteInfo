@@ -351,7 +351,7 @@ section article p {
     Règles appliquées à la page inscription.html
 *******************************************************************************/
 
-div.champ {
+tr {
     position : center;
 }
 
