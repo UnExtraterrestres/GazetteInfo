@@ -370,7 +370,7 @@ section article p {
 section.horizontal-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 section.horizontal-section article {
