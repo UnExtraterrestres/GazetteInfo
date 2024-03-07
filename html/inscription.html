@@ -28,54 +28,41 @@
             <section>
                 <h2>Formulaire d'inscription</h2>
                 <p>Pour vous inscrire, remplissez le formulaire ci-dessous</p>
-                
-                <div>
-                    <p>Choisissez un pseudo</p>
-                    <input type="text" name="pseudo" required>
-                </div>
-                <div>
-                    <p>Votre civilité</p>
-                    <input type="radio" name="Monsieur">
-                    <inpur type="radio" name="Madame">
-                </div>
-                <div>
-                    <p>Votre nom</p>
-                    <input type="text" name="nom" required>
-                </div>
-                <div>
-                    <p>Votre prénom</p>
-                    <input type="text" name="prenom" required>
-                </div>
-                <div>
-                    <p>Votre date de naissance</p>
-                    <input type="date" name="date" required>
-                </div>
-                <div>
-                    <p>Votre email</p>
-                    <input type="email" name="email" required>
-                </div>
-                <div>
-                    <p>Choisissez un mot de passe</p>
-                    <input type="password" name="password" required>
-                </div>
-                <div>
-                    <p>Répétez le mot de passe</p>
-                    <input type="password" name="password" required>
-                </div>
-                <div>
-                    <p>J'ai lu et accepté les conditions générales d'utilisation</p>
-                    <input type="checkbox" name="conditionutils" required>
-                </div>
-                <div>
-                    <div>
-                        <input type="checkbox" name="tonnemails" required>
-                        <p>J'accepte de recevoir des tonnes de mails pourris</p>
-                    </div>
-                </div>
-                <div>
-                    <!--Boutons "S'inscrire"-->
-                    <input type="reset" name="reset">
-                </div>
+                <table>
+                    <tr>
+                        <td><p>Choisissez un pseudo</p></td><td><input type="text" name="pseudo" required></td>
+                    </tr>
+                    <tr>
+                        <td><p>Votre civilité</p></td><td><input type="radio" name="Monsieur"></td><td><input type="radio" name="Madame"></td><td><input type="radio" name="Non-binaire"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Votre nom</p></td><td><input type="text" name="nom" required></td>
+                    </tr>
+                    <tr>
+                        <td><p>Votre prénom</p></td><td><input type="text" name="prenom" required></td>
+                    </tr>
+                    <tr>
+                        <td><p>Votre date de naissance</p></td><td><input type="date" name="date" required></td>
+                    </tr>
+                    <tr>
+                        <td><p>Votre email</p></td><td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><p>Choisissez un mot de passe</p></td><td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Répétez le mot de passe</p></td><td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="conditioutils"></td><p>J'ai lu et  accepté les conditions générales d'utilisation</p>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="tonemails" required></td><td><p>J'accepte de recevoir des tonnes de mails pourris</p></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="S'inscrire"></td><td><input type="reset" name="Réinitialiser"></td>
+                    </tr>
+                </table>
             </section>
         </main>
 
