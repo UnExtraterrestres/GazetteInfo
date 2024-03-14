@@ -392,3 +392,33 @@ section.horizontal-section h3 {
 section.horizontal-section article:last-child {
     margin-right: 0 !important;
 }
+
+.horizontal-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.horizontal-section table {
+    width: 100%;
+}
+
+.horizontal-section table tr {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.horizontal-section table td {
+    text-align: center;
+}
+
+.horizontal-section table img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.horizontal-section table h3 {
+    margin: 0;
+}
