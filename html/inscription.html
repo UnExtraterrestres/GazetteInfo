@@ -1,86 +1,87 @@
 <!doctype html>
-
 <html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>La gazette de L-INFO | Accueil</title>
-        <link rel="stylesheet" type="text/css" href="../styles/gazette.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>La gazette de L-INFO | Inscription</title>
+    <link rel="stylesheet" type="text/css" href="../styles/gazette.css">
+</head>
 
-    <body>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="actus.html">Toute l'actu</a></li>
-                <li><a href="../php/recherche.php">Recherche</a></li>
-                <li><a href="redaction.html">La rédac'</a></li>
-                <li><a href="../php/connexion.php">connecter</a></li>
-            </ul> 
-        </nav>
-
-        <header>
-            <img src="../images/titre.png" alt="La gazette de L-INFO" width="780" height="83">
-            <h1>Inscription</h1>
-        </header>
-
-        <main>
-            <section id="inscription">
-                <h2>Formulaire d'inscription</h2>
-                <p>Pour vous inscrire, remplissez le formulaire ci-dessous</p>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index_TP2.html">Accueil</a></li>
+            <li><a href="./actus.html">Toute l'actu</a></li>
+            <li><a href="../php/recherche.php">Recherche</a></li>
+            <li><a href="./redaction.html">La rédac'</a></li>
+            <li><a href="../php/connexion.php">Se connecter</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="../images/titre.png" alt="Image du titre | La gazette de L-INFO" width="780" height="83">
+        <h1>Inscription</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Formulaire d'inscription</h2>
+            <p>Pour vous inscrire, remplissez le formulaire ci-dessous.</p>
+            <form action="../php/inscription.php" method="post">
                 <table>
                     <tr>
-                        <td>Choisissez un pseudo :</td><td><input type="text" placeholder="4 caractères alphanumériques minimum" minlength=4 required></td>
+                        <td><label for="txtPseudo">Choisissez un pseudo :</label></td>
+                        <td><input type="text" name="pseudo" id="txtPseudo" value="" placeholder="4 caractères alphanumériques minimum"></td>
                     </tr>
                     <tr>
+                        <td>Votre civilité :</td>
                         <td>
-                            Votre civilité :
-                            <label><input type="radio" id="civMonsieur"></label>
-                                <label for="civMonsieur">Monsieur</label>
-                            <label><input type="radio" id="civMadame"></label>
-                                <label for="civMadame">Madame</label>
-                            <label><input type="radio" id="civAutre"></label>
-                                <label for="civAutre">Non-binaire</label>
+                            <label><input type="radio" name="radSexe" value="1"> Monsieur</label>
+                            <input type="radio" name="radSexe" id="radio1" value="2"> <label for="radio1">Madame</label>
+                            <input type="radio" name="radSexe" id="radio2" value="3"> <label for="radio2">Non binaire</label>
                         </td>
                     </tr>
                     <tr>
-                        <td>Votre nom :</td><td><input type="text" required></td>
+                        <td><label for="txtNom">Votre nom :</label></td>
+                        <td><input type="text" name="nom" id="txtNom" value=""></td>
                     </tr>
                     <tr>
-                        <td>Votre prénom :</td><td><input type="text" required></td>
+                        <td><label for="txtPrenom">Votre prénom :</label></td>
+                        <td><input type="text" name="prenom" id="txtPrenom" value=""></td>
                     </tr>
                     <tr>
-                        <td>Votre date de naissance :</td><td><input type="date" required></td>
+                        <td><label for="dateNaissance">Votre date de naissance :</label></td>
+                        <td><input type="date" id="dateNaissance" name="naissance" value=""></td>
                     </tr>
                     <tr>
-                        <td>Votre email :</td><td><input type="email" required></td>
+                        <td><label for="txtEmail">Votre email :</label></td>
+                        <td><input type="email" name="email" id="txtEmail" value=""></td>
                     </tr>
                     <tr>
-                        <td>Choisissez un mot de passe :</td><td><input type="password"></td>
+                        <td><label for="txtPassword1">Choisissez un mot de passe :</label></td>
+                        <td><input type="password" name="passe1" id="txtPassword1"></td>
                     </tr>
                     <tr>
-                        <td>Répétez le mot de passe :</td><td><input type="password"></td>
+                        <td><label for="txtPassword2">Répétez le mot de passe :</label></td>
+                        <td><input type="password" name="passe2" id="txtPassword2"></td>
                     </tr>
                     <tr>
-                        <td>
-                            <label for="condutils">J'ai lu et accepté les conditions générales d'utilisation</label>
-                            <input type="checkbox" id="condutils" required>
+                        <td colspan="2">
+                            <label><input type="checkbox" name="cbCGU" value="1" required>
+                                J'ai lu et j'accepte les conditions générales d'utilisation </label>
+                            <label><input type="checkbox" name="cbSpam" value="1" checked>
+                                J'accepte de recevoir des tonnes de mails pourris </label>
                         </td>
-                        <td>
-                            <label for="condmails">J'accepte de recevoir des tonnes de mails pourris</label>
-                            <input type="checkbox" id="condmails" required>
-                        </td>
                     </tr>
                     <tr>
-                        <td><input type="submit"></td>
-                        <td><input type="reset"></td>
+                        <td colspan="2">
+                            <input type="submit" name="btnInscription" value="S'inscrire">
+                            <input type="reset" value="Réinitialiser">
+                        </td>
                     </tr>
                 </table>
-            </section>
-        </main>
+            </form>
+        </section>
+    </main>
+    <footer>&copy; Licence Informatique - Février 2024 - Tous droits réservés</footer>
+</body>
 
-        <footer>
-            <p>&copy; Licence Informatique - Février 2024 - Tous droits réservés</p>
-        </footer>
-    </body>
 </html>
