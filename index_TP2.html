@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>La gazette de L-INFO | Le site de désinformation n°1 des étudiants en Licence Info</title>
+    <link rel="stylesheet" type="text/css" href="./styles/gazette.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="./html/actus.html">Toute l'actu</a></li>
+            <li><a href="./php/recherche.php">Recherche</a></li>
+            <li><a href="./html/redaction.html">La rédac'</a></li>
+            <li><a href="#">jbigoude</a>
+                <ul>
+                    <li><a href="./php/compte.php">Mon profil</a></li>
+                    <li><a href="./php/nouveau.php">Nouvel article</a></li>
+                    <li><a href="./php/deconnexion.php">Se déconnecter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <img src="./images/titre.png" alt="Image du titre | La gazette de L-INFO" width="780" height="83">
+        <h1>Le site de désinformation n°1 des étudiants en Licence Info</h1>
+    </header>
+
+    <main>
+        <section class="centre">
+            <h2>&Agrave; la Une</h2>
+            <a href="./php/article.php?id=10">
+                <img src="upload/10.jpg" alt="Photo d'illustration | Un mouchard dans un corrigé de Langages du Web"><br>
+                Un mouchard dans un corrigé de Langages du Web
+            </a>
+
+            <a href="./html/article.html">
+                <img src="upload/9.jpg" alt="Photo d'illustration | Votez pour l'hymne de la Licence"><br>
+                Votez pour l'hymne de la Licence
+            </a>
+            <a href="./php/article.php?id=8">
+                <img src="upload/8.jpg" alt="Photo d'illustration | L'amphi Sciences Naturelles bientôt renommé amphi Mélenchon"><br>
+                L'amphi Sciences Naturelles bientôt renommé amphi Mélenchon
+            </a>
+        </section>
+
+        <section class="centre">
+            <h2>L'info brûlante</h2>
+            <a href="./php/article.php?id=2">
+                <!-- L'élément br est nécessaire pour cet article -->
+                <img src="upload/2.jpg" alt="Photo d'illustration | Il avait annoncé 'Je vais vous défoncer' l'enseignant relaxé"><br>
+                Il leur avait annoncé "Je vais vous défoncer" l'enseignant relaxé
+            </a>
+            <a href="./php/article.php?id=7">
+                <img src="upload/7.jpg" alt="Photo d'illustration | Une famille de pingouins s'installe dans l'amphi B"><br>
+                Une famille de pingouins s'installe dans l'amphi B
+            </a>
+            <a href="./html/article.html">
+                <img src="upload/9.jpg" alt="Photo d'illustration | Votez pour l'hymne de la Licence"><br>
+                Votez pour l'hymne de la Licence
+            </a>
+        </section>
+
+        <section class="centre">
+            <h2>Les incontournables</h2>
+            <a href="./php/article.php?id=5">
+                <img src="upload/5.jpg" alt="Photo d'illustration | Le calendier des Dieux de la Licence bientôt disponible"><br>
+                Le calendier des Dieux de la Licence bientôt disponible
+            </a>
+            <a href="./php/article.php?id=6">
+                <img src="upload/6.jpg" alt="Photo d'illustration | Arnaque au devoir corrigé de TLSP"><br>
+                Une arnarque au corrigé de TL mise à jour
+            </a>
+            <a href="./php/article.php?id=3">
+                <img src="upload/3.jpg" alt="Photo d'illustration | Qui se cache derrière la Gazette de L-INFO ?"><br>
+                Qui se cache derrière la Gazette de L-INFO ?
+            </a>
+        </section>
+
+        <section>
+            <h2>Horoscope de la semaine</h2>
+
+            <p>Vous l'attendiez tous, voici l'horoscope du semestre pair de l'année 2023-2024. Sans surprise, il n'est pas terrible...</p>
+
+            <table id="horoscope">
+                <tr>
+                    <td>Signe</td>
+                    <td>Date</td>
+                    <td>Votre horoscope</td>
+                </tr>
+                <tr>
+                    <td>&#9800; Bélier</td>
+                    <td>du 21 mars<br>au 19 avril</td>
+                    <td rowspan="4">
+                        <p>Après des vacances bien méritées, l'année reprend sur les chapeaux de roues. Tous les signes sont concernés. </p>
+                        <p>Jupiter s'aligne avec Saturne, péremptoirement à Venus, et nous promet un semestre qui ne sera pas de tout repos.
+                        Février sera le mois le plus tranquille puisqu'il ne comporte que 29 jours.</p>
+                        <p>Les fins de mois seront douloureuses pour les natifs du 2e décan au moment où tomberont les tant-attendus résultats
+                            du module d'<em>Algorithmique et Structures de Données</em> du semestre 3.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#9801; Taureau</td>
+                    <td>du 20 avril<br>au 20 mai</td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td>&#9811; Poisson</td>
+                    <td>du 20 février<br>au 20 mars</td>
+                </tr>
+            </table>
+
+            <p>Malgré cela, notre équipe d'astrologues de choc vous souhaite à tous un bon semestre.</p>
+        </section>
+
+    </main>
+
+    <footer>&copy; Licence Informatique - Février 2024 - Tous droits réservés</footer>
+
+</body>
+
+</html>
