@@ -107,6 +107,30 @@ body > header, main, body > footer {
     background-color: transparent;
 }
 
+/* Ajout TP2 pour que le footer enfant direct du body
+ * soit toujours positionné en bas du viewport
+ */
+
+body > footer {
+    height: 20px;
+}
+
+/* Quand le premier enfant de l'élément main est un élément section, il a une margin-top de 50 px. C'est le cas de toutes les pages sauf la page
+ * article/html dans laquelle le premier enfant de l'élément main est un élément article avec une une margin-top de 20 px.
+ */
+
+main{
+    min-height: calc(100vh - 42px - 200px - 50px - 30px - 20px - 10px);
+/*     margin-top: 50px; */ /* inutile compte-tenu de la fusion des marges externes */
+    margin-bottom: 30px;
+}
+
+main#article{
+    min-height: calc(100vh - 42px - 200px - 20px - 30px - 20px - 10px);
+/*     margin-top: 20px; */ /* inutile compte-tenu de la fusion des marges externes */
+}
+
+
 p, blockquote {
     text-align: justify;
     margin: 10px auto;
@@ -133,6 +157,11 @@ figure {
     text-align: center;
 }
 
+/** ajout TP2 (appliquée aux 3 premières sections de la page index.html) **/
+.centre {
+    text-align: center;
+}
+
 /************************************************************************
                         Menu de navigation
 *************************************************************************/
@@ -145,7 +174,7 @@ nav {
     height: 40px;
 }
 
-nav ul {
+nav > ul {
     transition: background 0.4s linear 0s;
     background: rgba(255, 255, 255, 0.8);
     text-align: right;
@@ -155,17 +184,17 @@ nav ul:hover {
     background: rgb(255, 255, 255);
 }
 
-nav ul li {
+nav > ul > li {
     text-align: left;
     display: inline-block;
     width: 150px;
 }
 
-nav ul li:first-child {
+nav > ul > li:first-child {
     float: left;
 }
 
-nav ul li:last-of-type  a::before {
+nav > ul > li:last-of-type > a::before {
     content: "\2630\00A0";
 }
 
@@ -181,6 +210,17 @@ nav a[href]:hover {
     text-decoration: none;
     color: #FFF;
     background: #333;
+}
+
+/* TP2 : gestion du sous-menu */
+nav > ul > li > ul {
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+}
+
+nav > ul > li:hover > ul {
+    display: block;
 }
 
 /**********************************************************************
@@ -241,6 +281,13 @@ section > h2 {
     border-radius: 0 10px 0 0;
     padding: 5px 10px;
 }
+
+section article h3 {
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
 
 /******************************************************************************
     Règles appliquées à la page article.html
@@ -303,35 +350,38 @@ section > ul li p::before {
     Règles appliquées à la page redaction.html
 *******************************************************************************/
 
-section article {
+/*  TP2 : ajout de la classe "redacteur" pour les éléments article qui décrivent des rédacteurs
+ *
+ * Explication : il y a, sur les pages actus.html et redaction.html, des éléments article qui ont comme parent un élément section.
+ * Or, ces éléments article ont un style différent sur ces 2 pages (sauf les titres h3)
+ * On leur attribue une classe différente pour que les styles appliquées à ces éléments soient séparés.
+ *
+ * Les éléments article, qui décrivent le résumé d'un article sur la page actus.html, ont eux la classe "resume"
+*/
+
+section article.redacteur {
     position: relative;
     margin: 10px auto; 
     min-height: 200px;
 }
 
-section article:not(:only-of-type) {
+section article.redacteur:not(:only-of-type) {
     border-top: solid 2px #000;
     padding-top: 20px;
 }
 
-section article:not(:last-of-type) {
+section article.redacteur:not(:last-of-type) {
     padding-bottom: 10px;
 }
 
-section article h3 {
-    font-size: 16px;
-    text-decoration: none;
-    margin-bottom: 20px;
-}
-
-section article img {
+section article.redacteur img {
     width: 150px;
     height: 200px;
     float: left;
     margin-right: 20px;
 }
 
-section article h4 {
+section article.redacteur h4 {
     position: absolute;
     width: auto;
     text-align: right;
@@ -342,83 +392,152 @@ section article h4 {
     top: 0px;
 }
 
-section article p {
+section article.redacteur p {
     padding-left: 170px;
     margin-bottom: 0;
 }
 
-/******************************************************************************
-    Règles appliquées à la page inscription.html
-*******************************************************************************/
+/****************************************************************************************
+        Règles appliquées à la page actus.html
+****************************************************************************************/
 
-#inscription table{
-    border: 0;
+section article.resume {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #E5E5E5;
 }
 
-#inscription td {
-    border: 0;
+section article.resume:first-of-type {
+    border-radius: 10px 10px 0px 0px;
+}
+
+section article.resume:last-of-type {
+    border-radius: 0 0 10px 10px;
+}
+
+section h2 + article.resume:only-of-type {
+    border-radius: 10px;
+}
+
+
+section article.resume img {
+    float: left;
+    width: 160px;
+    height: 120px;
+    margin-right: 10px;
+    border-radius: inherit;
+}
+
+section article.resume footer {
+    text-align: right;
+    clear: left;
+}
+
+/****************************************************************************************
+        Règles appliquées à la page index.html
+****************************************************************************************/
+
+
+section > a[href], section > a[href]:visited{
+    display: inline-block;
+    width: 270px;
+    vertical-align: top;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+section > a[href]:hover{
+    text-decoration: none;
+}
+section > a:not(:first-of-type):not(:last-of-type) {
+    margin: 0 12px 0 12px;
+}
+
+section > a > img {
+    border: solid 1px #000;
+    width: 248px;
+    height: 186px;
+    margin: 0 0 10px 0;
+}
+section > a:hover > img {
+    box-shadow: 0px 0px 20px red;
+}
+
+/** Tableau horoscope  **/
+#horoscope {
+    width: 700px;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+#horoscope tr:first-child {
+    font-weight: bold;
+}
+
+#horoscope tr {
+    height: 30px;
+}
+
+#horoscope td {
+    padding: 5px 10px;
+    border: solid 1px #000;
+    text-align:justify;
+}
+
+#horoscope td:nth-child(1), #horoscope td:nth-child(2) {
+    width: 100px;
+}
+
+/****************************************************************
+        Formulaire d'inscription
+****************************************************************/
+
+form input[type=text], form input[type=email], form input[type=password] {
+    width: 250px;
+}
+
+form table {
+    margin: 15px auto;
+}
+
+form table td {
+    padding: 7px;
+    width: 350px;
+}
+
+form td:first-child:not(:only-child) {
     text-align: right;
 }
 
-#inscription td input {
-    float: left;
-}
-
-/******************************************************************************
-    Règles appliquées aux section horizontales
-*******************************************************************************/
-section.horizontal-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-section.horizontal-section article {
-    width: 30%;
-    margin-bottom: 20px;
+form td[colspan] {
     text-align: center;
 }
 
-section.horizontal-section img {
-    max-width: 100%;
-    height: auto;
-}
-
-section.horizontal-section h3 {
-    margin-top: 10px;
-    order: 1;
-}
-
-section.horizontal-section article:last-child {
-    margin-right: 0 !important;
-}
-
-.horizontal-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.horizontal-section table {
-    width: 100%;
-}
-
-.horizontal-section table tr {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.horizontal-section table td {
-    text-align: center;
-}
-
-.horizontal-section table img {
-    width: 400px;
-    height: 300px;
+form td[colspan] label {
+    text-align: left;
     display: block;
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 160px;
 }
 
-.horizontal-section table h3 {
-    margin: 0;
+
+form input[type=submit], form input[type=reset] {
+    margin: 0px 10px;
+    width: auto;
+    height: 28px;
+    background-color: #f0f0f0;
+    font-size: 15px;
+    font-weight: bold;
+    border: solid 2px #444;
+    border-radius: 5px;
+    padding: 2px 5px;
+    min-width: 30px;
+    cursor: pointer;
 }
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background: red;
+    color: white;
+}
+
